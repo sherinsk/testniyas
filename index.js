@@ -27,7 +27,7 @@ app.use('/uploads', express.static('uploads'));
 // Route to handle form submission and photo upload
 app.post('/upload', upload.single('photo'), (req, res) => {
   const { name, age } = req.body;
-  const photoUrl = req.file ? `http://localhost:${port}/uploads/${req.file.filename}` : null;
+  const photoUrl = req.file ? `https://testniyas.onrender.com/uploads/${req.file.filename}` : null;
 
   res.status(200).json({
     name,
